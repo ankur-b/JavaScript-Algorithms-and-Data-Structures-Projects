@@ -1,7 +1,6 @@
 var output = document.getElementById("output");
 var submit = document.getElementById("submit");
 var input = document.getElementById("input");
-var stri = input.innerHTML;
 function palindrome(str){
 	str = str.replace(/[\W_]/g, '').toLowerCase();
 	var x = "";
@@ -10,8 +9,8 @@ function palindrome(str){
 	}
 	return x===str;
 }
-var result = palindrome(stri);
+
 document.getElementById("btn").onclick=function(){
+	var result = palindrome(input.value);
 output.innerHTML=result;
 };
- 
